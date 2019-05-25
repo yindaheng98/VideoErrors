@@ -6,6 +6,7 @@ const con = require('../controllers/connections');
 router.post('/', function (req, res, next) {
     try {
         let data_str = req.query.data;
+        JSON.parse(data_str);
         let time = moment().valueOf();
         con.runtime.put(time, data_str);
         con.redis.set(time, data_str, function (err) {//就写入一个时间值
