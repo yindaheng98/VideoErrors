@@ -4,7 +4,7 @@
             url: "runtime",
             timeout: 40000, //超时时间设置，单位毫秒
             type: 'get',
-            data: {during: 400000}, //请求所传参数，json格式
+            data: {during: 2600}, //请求所传参数，json格式
             dataType: 'json', //返回的数据格式
             success: function (data) {
                 updatePage(data);
