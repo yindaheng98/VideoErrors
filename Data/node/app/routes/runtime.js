@@ -9,13 +9,12 @@ router.get('/', function (req, res, next) {
             if (err) {
                 res.send('err');
                 console.log(err);
-            } else if(v) {
+            } else if (v) {
                 console.log(v);
                 let data = JSON.parse(v);
                 let time = moment(data[0]);
-                res.send(JSON.stringify([time, data[1]]));
-            }
-            else {
+                res.send(JSON.stringify([time, JSON.parse(data[1])]));
+            } else {
                 res.send('timout');
             }
         })

@@ -1,13 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/web-3.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/excel.js"></script>
+
+    <style>
+        .current a {
+            color: #000;
+            background: #47bde1;
+        }
+    </style>
+    <script src="main.js"></script>
+    <title>WAK-Home</title>
 </head>
 <body>
 
+
+<ul class="userMenu">
+    <li class="current" id="center"><a href="#">摄像头1</a></li>
+    <li id="traffic"><a href="#">摄像头2</a></li>
+    <li id="account"><a href="#">摄像头3</a></li>
+    <li id="analysis"><a href="#">摄像头4</a></li>
+    <li id="analysis1"><a href="#">摄像头5</a></li>
+
+</ul>
+<div id="content">
+    <div class="main">
+        <div class="heading1">
+            摄像头1
+        </div>
+        <div style="width: 80px;height: 30px;float:right;margin-right: 100px;">
+            <img class="img1" src="resource/export-1.png" alt="" style="width: 100%;height: 100%;CURSOR: pointer"
+                 onclick="tableToExcel()"></div>
+        <div class="section1">
+            <div class="heading2">
+                折线图：
+            </div>
+            <div id="mainq" style="width: 550px;height:400px;left: 50px;top: 50px;"></div>
+        </div>
+        <div class="section5">
+            <div class="heading2">
+                数据（1）：
+            </div>
+            <div style="top: 20px; position: relative;">
+                <div style="width: 60px;height: 30px; top:30px;position: relative;float: left;color: #999999;
+		font-size:20px;font-family: Microsoft YaHei UI;letter-spacing:0.75px;">
+                    <p>静止：</p>
+                    <p>遮挡：</p>
+                    <p>噪点：</p>
+                </div>
+                <div style="width: 50px;left: 15px; height: 30px;top:30px;float:left;position: relative;color: #47bde1;
+		font-size:20px;font-family: Microsoft YaHei UI;letter-spacing:0.75px;">
+                    <p id="text1">1</p>
+                    <p id="text2">2</p>
+                    <p id="text3">2</p>
+                </div>
+                <div style="width: 80px;left: 40px;height: 30px;top:30px;float:left;position: relative;color: #47bde1;
+		font-size:20px;font-family: Microsoft YaHei UI;letter-spacing:0.75px;">
+                    <p>单位</p>
+                    <p>单位</p>
+                    <p>单位</p>
+                </div>
+                <div style="width: 200px;left: 40px;height: 30px;top:30px;float:left;position: relative;color: #999999;
+		font-size:20px;font-family: Microsoft YaHei UI;letter-spacing:0.75px;">
+                    <p>标准范围：(1~2)</p>
+                    <p>标准范围：(1~2)</p>
+                    <p>标准范围：(1~2)</p>
+                </div>
+            </div>
+        </div>
+        <div class="section6">
+            <div class="heading2">
+                数据（2）：
+            </div>
+            <div style="top: 20px; position: relative;">
+                <div style="width: 60px;height: 30px; top:30px;position: relative;float: left;color: #999999;
+		font-size:20px;font-family: Microsoft YaHei UI;letter-spacing:0.75px;">
+                    <p>色偏：</p>
+                    <p>晃动：</p>
+                    <p>模糊：</p>
+                </div>
+                <div style="width: 50px;left: 15px; height: 30px;top:30px;float:left;position: relative;color: #47bde1;
+		font-size:20px;font-family: Microsoft YaHei UI;letter-spacing:0.75px;">
+                    <p id="text4">1</p>
+                    <p id="text5">2</p>
+                    <p id="text6">2</p>
+                </div>
+                <div style="width: 80px;left: 40px;height: 30px;top:30px;float:left;position: relative;color: #47bde1;
+		font-size:20px;font-family: Microsoft YaHei UI;letter-spacing:0.75px;">
+                    <p>单位</p>
+                    <p>单位</p>
+                    <p>单位</p>
+                </div>
+                <div style="width: 200px;left: 40px;height: 30px;top:30px;float:left;position: relative;color: #999999;
+		font-size:20px;font-family: Microsoft YaHei UI;letter-spacing:0.75px;">
+                    <p>标准范围：(1~2)</p>
+                    <p>标准范围：(1~2)</p>
+                    <p>标准范围：(1~2)</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 </body>
-<script src="javascripts/lib/jquery-1.11.0.min.js"></script>
-<script src="javascripts/loop.js"></script>
+<script src="main.js"></script>
 <script src="javascripts/changePage.js"></script>
+<script src="javascripts/loop.js"></script>
 </html>
