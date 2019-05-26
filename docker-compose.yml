@@ -13,6 +13,10 @@ services:
       - "proxy"
     volumes: 
       - "./Data/node/app:/home/node/app"
+    logging: 
+      driver: "json-file"
+      options: 
+        max-size: "1k"
 
   redis:
     image: redis
