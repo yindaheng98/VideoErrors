@@ -1,4 +1,4 @@
-const redis = require('redis').createClient(6379, 'localhost');
+const redis = require('redis').createClient(6379, 'redis');
 let fs = require("fs");
 const file = 'data.txt';
 
