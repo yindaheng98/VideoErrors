@@ -15,6 +15,7 @@ function InitData() {
                 if (error) return console.log(error);
                 console.log('数据库已重置');
             });
+            return;
         }
         let runtime;
         for (let k in data) {
