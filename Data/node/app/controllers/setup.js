@@ -6,10 +6,10 @@ function InitData() {
         let data = {};
         try {
             let data_str = fs.readFileSync(con.file);
+            console.log(data_str);
             if (data_str.length <= 0) return;
             data = JSON.parse('{' + data_str.slice(0, -1) + '}');
         } catch (e) {
-            console.log(data_str);
             console.log('数据库有错误');
             console.log(e);
             fs.writeFile(con.file, '', 'utf8', function (error) {
