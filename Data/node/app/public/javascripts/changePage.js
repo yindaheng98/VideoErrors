@@ -21,6 +21,12 @@ function updatePage(d) {
             source: data1
         },
     });
+    document.getElementById("text1").innerHTML = data1[1][-1];
+    document.getElementById("text2").innerHTML = data1[2][-1];
+    document.getElementById("text3").innerHTML = data1[3][-1];
+    document.getElementById("text4").innerHTML = data1[4][-1];
+    document.getElementById("text5").innerHTML = data1[5][-1];
+    document.getElementById("text6").innerHTML = data1[6][-1];
 }
 
 function initPage(data) {
@@ -39,10 +45,10 @@ function initPage(data) {
             source: data1
         },
     });
-    document.getElementById("text1").innerHTML = data1[1][6];
-    document.getElementById("text2").innerHTML = data1[2][6];
-    document.getElementById("text3").innerHTML = data1[3][6];
-    document.getElementById("text4").innerHTML = data1[4][6];
-    document.getElementById("text5").innerHTML = data1[5][6];
-    document.getElementById("text6").innerHTML = data1[6][6];
+    document.getElementById("text1").innerHTML = data1[1][-1];
+    document.getElementById("text2").innerHTML = data1[2][-1];
+    document.getElementById("text3").innerHTML = data1[3][-1];
+    document.getElementById("text4").innerHTML = data1[4][-1];
+    document.getElementById("text5").innerHTML = data1[5][-1];
+    document.getElementById("text6").innerHTML = data1[6][-1];
 }
