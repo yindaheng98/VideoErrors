@@ -21,7 +21,7 @@ function updatePage(d) {
             source: data1
         },
     });
-    for(let i in data1){
+    for(let i=1;i<data1.length;i++){
         let num=''+data1[i].slice(-1);
         document.getElementById("text"+(parseInt(i)+1)).innerHTML = num.slice(0,6);
     }
@@ -43,7 +43,7 @@ function initPage(data) {
             source: data1
         },
     });
-    for(let i in data1){
+    for(let i=1;i<data1.length;i++){
         let num=''+data1[i].slice(-1);
         document.getElementById("text"+(parseInt(i)+1)).innerHTML = num.slice(0,6);
     }
