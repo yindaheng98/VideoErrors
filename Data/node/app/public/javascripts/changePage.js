@@ -23,7 +23,7 @@ function updatePage(d) {
     });
     for(let i=1;i<data1.length;i++){
         let num=''+data1[i].slice(-1);
-        document.getElementById("text"+(parseInt(i)+1)).innerHTML = num.slice(0,6);
+        document.getElementById("text"+i).innerHTML = num.slice(0,6);
     }
 }
 
@@ -45,6 +45,6 @@ function initPage(data) {
     });
     for(let i=1;i<data1.length;i++){
         let num=''+data1[i].slice(-1);
-        document.getElementById("text"+(parseInt(i)+1)).innerHTML = num.slice(0,6);
+        document.getElementById("text"+i).innerHTML = num.slice(0,6);
     }
 }
