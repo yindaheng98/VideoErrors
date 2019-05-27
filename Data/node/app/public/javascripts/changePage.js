@@ -9,6 +9,7 @@ let data1 = [['product'],
 function updatePage(d) {
     console.log('新增数据');
     console.log(d);
+    if(d[0] in data1[0])return;
     data1[0].splice(1, 1);
     data1[0].push(d[0]);
     for (let j = 1; j < data1.length; j++) {
