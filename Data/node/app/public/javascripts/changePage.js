@@ -21,12 +21,10 @@ function updatePage(d) {
             source: data1
         },
     });
-    document.getElementById("text1").innerHTML = data1[1].slice(-1);
-    document.getElementById("text2").innerHTML = data1[2].slice(-1);
-    document.getElementById("text3").innerHTML = data1[3].slice(-1);
-    document.getElementById("text4").innerHTML = data1[4].slice(-1);
-    document.getElementById("text5").innerHTML = data1[5].slice(-1);
-    document.getElementById("text6").innerHTML = data1[6].slice(-1);
+    for(let i in data1){
+        let num=''+data1[i].slice(-1);
+        document.getElementById("text"+i).innerHTML = num.slice(0,6);
+    }
 }
 
 function initPage(data) {
@@ -45,10 +43,8 @@ function initPage(data) {
             source: data1
         },
     });
-    document.getElementById("text1").innerHTML = data1[1].slice(-1);
-    document.getElementById("text2").innerHTML = data1[2].slice(-1);
-    document.getElementById("text3").innerHTML = data1[3].slice(-1);
-    document.getElementById("text4").innerHTML = data1[4].slice(-1);
-    document.getElementById("text5").innerHTML = data1[5].slice(-1);
-    document.getElementById("text6").innerHTML = data1[6].slice(-1);
+    for(let i in data1){
+        let num=''+data1[i].slice(-1);
+        document.getElementById("text"+i).innerHTML = num.slice(0,6);
+    }
 }
