@@ -4,15 +4,13 @@ services:
     restart: always
     depends_on: 
       - redis
-    build: ./node
+    build: ./
     expose: 
       - "3000"
     ports: 
-      - "3002:3000"
+      - "3000:3000"
     networks: 
       - "proxy"
-    volumes: 
-      - "./Data/node/app:/home/node/app"
     logging: 
       driver: "json-file"
       options: 
